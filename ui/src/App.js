@@ -5,7 +5,7 @@ function App() {
   return (
     <center>
       <MainHeader text="Face Recognition" />
-      <Todo text="Check in" />
+      <Todo text="Please Select Your Option" />
     </center>
   );
 }
