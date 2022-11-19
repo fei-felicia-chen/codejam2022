@@ -5,8 +5,8 @@ function App() {
   return (
     <section>
       <h1>Face Authentication</h1>
-      <button onClick={authenticateUser}>Check-In</button>
-      <button>Check-Out</button>
+      <button onClick={enrollNewUser}>Enroll User</button>
+      <button onClick={authenticateUser}>Authenticate User</button>
     </section>
   );
 }
