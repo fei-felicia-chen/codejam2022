@@ -1,11 +1,11 @@
 import Todo from "./components/Todo";
+import MainHeader from "./components/MainHeader";
 
 function App() {
   return (
     <center>
-      <h1>Face Recognition</h1>
+      <MainHeader text="Face Recognition" />
       <Todo text="Check in" />
-      <Todo text="Check out" />
     </center>
   );
 }

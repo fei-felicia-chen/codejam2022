@@ -16,13 +16,14 @@ h2 {
 
 .btn {
   font-family: trebuchet ms, sans-serif;
-  padding: 0.4rem 1.2rem;
+  padding: 0.5rem 1.6rem;
   cursor: pointer;
   border-radius: 4px;
   background-color: #04ae2b;
   color: white;
   border: 1px solid #04ae2b;
-  margin: 0 1rem;
+  margin: 1rem 1rem 1rem 1rem;
+
 }
 
 .btn:hover {
@@ -72,4 +73,11 @@ h2 {
   height: 100vh;
   top: 0;
   left: 0;
+}
+
+.MainHeader {
+  /* background-color: #6495ed; */
+  font-size: larger;
+  border-radius: 20px;
+  padding: 1rem 1rem 1rem 1rem;
 }
