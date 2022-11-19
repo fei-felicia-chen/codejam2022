@@ -2,11 +2,11 @@ import Todo from "./components/Todo";
 
 function App() {
   return (
-    <div>
-      <h1>Face recognition</h1>
-      <Todo text="Check In" />
-      <Todo text="Check Out" />
-    </div>
+    <center>
+      <h1>Face Recognition</h1>
+      <Todo text="Check in" />
+      <Todo text="Check out" />
+    </center>
   );
 }
 

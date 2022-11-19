@@ -3,35 +3,36 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: trebuchet ms, sans-serif;
+  font-size: x-large;
   margin: 3rem;
-  background-color: #dfdfdf;
+  background-color: #ffffff;
 }
 
 h1,
 h2 {
-  color: #333333;
+  color: #000000;
 }
 
 .btn {
-  font: inherit;
-  padding: 0.5rem 1.5rem;
+  font-family: trebuchet ms, sans-serif;
+  padding: 0.4rem 1.2rem;
   cursor: pointer;
   border-radius: 4px;
-  background-color: #800040;
+  background-color: #f4840c;
   color: white;
-  border: 1px solid #800040;
+  border: 1px solid #f4840c;
   margin: 0 1rem;
 }
 
 .btn:hover {
-  background-color: #9c1458;
-  border-color: #9c1458;
+  background-color: #fc8c04;
+  border-color: #fc8c04;
 }
 
 .btn--alt {
   background-color: transparent;
-  color: #800040;
+  color: #f4840c;
 }
 
 .btn--alt:hover {
