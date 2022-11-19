@@ -16,31 +16,31 @@ h2 {
 
 .btn {
   font-family: trebuchet ms, sans-serif;
-  padding: 0.4rem 1.2rem;
+  padding: 0.5rem 1.6rem;
   cursor: pointer;
   border-radius: 4px;
-  background-color: #f4840c;
+  background-color: #04ae2b;
   color: white;
-  border: 1px solid #f4840c;
-  margin: 0 1rem;
+  border: 1px solid #04ae2b;
+  margin: 1rem 1rem 1rem 1rem;
 }
 
 .btn:hover {
-  background-color: #fc8c04;
-  border-color: #fc8c04;
+  background-color: #019624;
+  border-color: #019624;
 }
 
 .btn--alt {
   background-color: transparent;
-  color: #f4840c;
+  color: #04ae2b;
 }
 
 .btn--alt:hover {
-  background-color: #f8dae9;
+  background-color: #e0f8da;
 }
 
 .card {
-  background-color: white;
+  background-color: rgb(255, 251, 240);
   border-radius: 4px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   padding: 1rem;
@@ -72,4 +72,11 @@ h2 {
   height: 100vh;
   top: 0;
   left: 0;
+}
+
+.MainHeader {
+  /* background-color: #6495ed; */
+  font-size: larger;
+  border-radius: 20px;
+  padding: 1rem 1rem 1rem 1rem;
 }
