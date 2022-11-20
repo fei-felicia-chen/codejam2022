@@ -18,6 +18,7 @@ function App() {
               <button className="btn" onClick={authenticateUser}>
                 Log In
               </button>
+
             </section>
           </Route>
           <Route path="/check">

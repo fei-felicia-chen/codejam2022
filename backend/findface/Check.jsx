@@ -14,6 +14,7 @@ function Check() {
         </Link>
       </section>
     </div>
+
   );
 }
 
