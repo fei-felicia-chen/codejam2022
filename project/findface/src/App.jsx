@@ -4,6 +4,8 @@ import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
 import Check from "./components/pages/Check";
 import CheckIn from "./components/pages/CheckIn";
 import CheckOut from "./components/pages/CheckOut";
+import IsValidIn from "../../IsValidIn";
+import IsValidOut from "../../IsValidOut";
 
 function App() {
   return (
@@ -25,10 +27,10 @@ function App() {
             <Check />
           </Route>
           <Route path="/check-in">
-            <CheckIn />
+            <IsValidIn />
           </Route>
           <Route path="/check-out">
-            <CheckOut />
+            <IsValidOut />
           </Route>
         </Switch>
       </div>
