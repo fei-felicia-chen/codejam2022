@@ -3,7 +3,6 @@ import "./components/authentication/authentication";
 import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
 import Check from "./components/pages/Check";
 import CheckIn from "./components/pages/CheckIn";
-import "../../location";
 
 function App() {
   return (
