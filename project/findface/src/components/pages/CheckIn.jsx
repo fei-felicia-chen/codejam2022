@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import isValidIn from "../../../../locationIn";
 import classes from "./Check.module.css";
+import isVal from "../../../../locationIn";
 
 function CheckIn(props) {
-  if (isValidIn) {
+  if (!isVal) {
     return (
       <div>
         <section>
