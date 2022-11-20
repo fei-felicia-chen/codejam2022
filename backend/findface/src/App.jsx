@@ -2,6 +2,8 @@ import "./App.css";
 import "./components/authentication/authentication";
 import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
 import Check from "./components/pages/Check";
+import CheckIn from "./components/pages/CheckIn";
+import "../../location";
 
 function App() {
   return (
@@ -22,7 +24,9 @@ function App() {
           <Route path="/check">
             <Check />
           </Route>
-          <Route path="/check-in">{/* <CheckInForm /> */}</Route>
+          <Route path="/check-in">
+            <CheckIn />
+          </Route>
           <Route path="/check-out"></Route>
         </Switch>
       </div>

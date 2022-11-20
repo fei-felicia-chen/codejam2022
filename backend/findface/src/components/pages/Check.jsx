@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import classes from "./Check.module.css";
+import "../../../../location";
 
 function Check() {
   return (
@@ -14,7 +15,6 @@ function Check() {
         </Link>
       </section>
     </div>
-
   );
 }
 

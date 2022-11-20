@@ -56,12 +56,14 @@ function authenticateUser() {
       const curr = location.href;
       location.href = curr.concat("check");
     })
-    .catch((errCode) => {
+    .catch(async (errCode) => {
       // handle authentication failure. Visit:
       // https://faceio.net/integration-guide#error-codes
       // for the list of all possible error codes
 
       handleError(errCode);
+      await new Promise((resolve) => setTimeout(resolve, 3000));
+      location.reload();
     });
 }
 function handleError(errCode) {
