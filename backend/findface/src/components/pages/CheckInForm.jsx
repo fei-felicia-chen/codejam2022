@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import "./src/App.css";
-import Card from "./card/Card";
+import Card from "../components/card/Card";
 import classes from "./CheckInForm.module.css";
 
 function CheckInForm(props) {
