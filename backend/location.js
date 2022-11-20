@@ -1,4 +1,3 @@
-
 let targetLong;
 let targetLat;
 
@@ -79,4 +78,3 @@ function isValidOut(long, lat) {
   }
   setTimeout(toMain(), 5000);
 }
-export default isValidLocation;
