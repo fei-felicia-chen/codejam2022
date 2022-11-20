@@ -2,6 +2,7 @@ let targetLong;
 let targetLat;
 let currLong;
 let currLat;
+export let isVal;
 
 function setLocation(long, lat) {
   targetLat = lat;
@@ -57,10 +58,12 @@ async function isValidIn() {
   const dist = calcDist(currLong, currLat, targetLong, targetLat);
   if (isValid(dist)) {
     // document.write("Check in success!");
-    return true;
+    // return true;
+    isVal = true;
   } else {
     // document.write("Check in failed, please be at the assigned location.");
-    return false;
+    // return false;
+    isVal = false;
   }
 }
 
