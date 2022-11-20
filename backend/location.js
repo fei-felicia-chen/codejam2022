@@ -1,5 +1,5 @@
-let targetLong = document.getElementById("location").longitude;
-let targetLat = document.getElementById("location").latitude;
+let targetLong;
+let targetLat;
 
 const options = {
   enableHighAccuracy: true,
@@ -18,16 +18,8 @@ const errorCallBack = (error) => {
   console.log(error);
 };
 
-const valid = navigator.geolocation.getCurrentPosition(
+navigator.geolocation.getCurrentPosition(
   sucessCallBack,
   errorCallBack,
   options
 );
-
-function isValidLocation() {
-  if (valid) {
-    window.history.back();
-  } else {
-    window.history.back();
-  }
-}
