@@ -1,4 +1,5 @@
 // Initialize the library first with your application Public ID.
+
 // Grab your public ID from the Application Manager on the FACEIO console at: https://console.faceio.net/
 const faceio = new faceIO("fioa7d2f"); // Replace with your application Public ID
 function enrollNewUser() {
@@ -51,11 +52,15 @@ function authenticateUser() {
       // during his enrollment via the payload parameter the enroll() method takes.
       console.log("Associated Payload: " + JSON.stringify(userData.payload));
       // {"whoami": 123456, "email": "john.doe@example.com"} set via enroll()
+      // link to new page
+      const curr = location.href;
+      location.href = curr.concat("check");
     })
     .catch((errCode) => {
       // handle authentication failure. Visit:
       // https://faceio.net/integration-guide#error-codes
       // for the list of all possible error codes
+
       handleError(errCode);
     });
 }
