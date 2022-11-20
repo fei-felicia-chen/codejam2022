@@ -3,8 +3,9 @@
 `cd findface`
 `npm install --save react-router-dom@5`
 `npm install vite`
-
+## Instructions
 To run, do `npm run dev`
+
 # Authors:
 * Chen Jun Chi
 * Felicia Chen
