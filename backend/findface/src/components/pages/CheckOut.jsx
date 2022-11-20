@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
-import isValidIn from "../../../../locationIn";
+import isValidOut from "../../../../locationOut";
 import classes from "./Check.module.css";
 
-function CheckIn(props) {
-  if (isValidIn) {
+function CheckOut(props) {
+  if (isValidOut) {
     return (
       <div>
         <section>
-          <h1 className={classes.header}>The Check In is a Success!</h1>
+          <h1 className={classes.header}>Check Out Is Successful!</h1>
           <Link to="/">
             <button className={classes.btnB}>Back</button>
           </Link>
@@ -28,4 +28,4 @@ function CheckIn(props) {
   }
 }
 
-export default CheckIn;
+export default CheckOut;
