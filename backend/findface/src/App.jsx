@@ -1,8 +1,7 @@
 import "./App.css";
-import "../authentication";
+import "./components/authentication/authentication";
 import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
-import Check from "../Check";
-import CheckInForm from "../CheckInForm";
+import Check from "./components/pages/Check";
 
 function App() {
   return (
@@ -18,7 +17,6 @@ function App() {
               <button className="btn" onClick={authenticateUser}>
                 Log In
               </button>
-
             </section>
           </Route>
           <Route path="/check">
