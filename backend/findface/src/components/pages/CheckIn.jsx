@@ -1,5 +1,3 @@
-import "../../../../location";
-
 function CheckIn(props) {
   return (
     <div>

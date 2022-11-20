@@ -1,5 +1,7 @@
 let targetLong;
 let targetLat;
+let currLong;
+let currLat;
 
 function setLocation(long, lat) {
   targetLat = lat;
@@ -22,6 +24,10 @@ function calcDist(long1, lat1, long2, lat2) {
   return c * r;
 }
 
+function isValid(dist) {
+  return dist < 1;
+}
+
 function toMain() {
   location.href = "/";
 }
@@ -32,49 +38,28 @@ const options = {
 };
 
 const sucessCallBack = (position) => {
-  const long = position.coords.longitude;
-  const lat = position.coords.latitude;
-  let dist = calcDist(long, lat, targetLong, targetLat);
-  if (dist < 1) return true;
-  else return false;
+  currLong = position.coords.longitude;
+  currLat = position.coords.latitude;
 };
 
 const errorCallBack = (error) => {
   console.log(error);
 };
 
-const valid = navigator.geolocation.getCurrentPosition(
+navigator.geolocation.getCurrentPosition(
   sucessCallBack,
   errorCallBack,
   options
 );
 
-function isValidIn(long, lat) {
-  setLocation(long, lat);
-  const valid = navigator.geolocation.getCurrentPosition(
-    sucessCallBack,
-    errorCallBack,
-    options
-  );
-  if (valid) {
-    document.write("Check in success!");
-  } else {
-    document.write("Check in failed, please be at the assigned location.");
-  }
-  setTimeout(toMain(), 5000);
-}
-
-function isValidOut(long, lat) {
-  setLocation(long, lat);
-  const valid = navigator.geolocation.getCurrentPosition(
-    sucessCallBack,
-    errorCallBack,
-    options
-  );
-  if (valid) {
+async function isValidOut() {
+  setLocation(-73.595552, 45.451863);
+  const dist = calcDist(currLong, currLat, targetLong, targetLat);
+  if (isValid(dist)) {
     document.write("Check out success!");
   } else {
     document.write("Check out failed, please be at the assigned location.");
   }
-  setTimeout(toMain(), 5000);
+  setTimeout(toMain, 5000);
 }
+export default isValidOut;
