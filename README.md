@@ -14,7 +14,7 @@ In order to prevent someone to pretend to be the original contractor, the latter
 We are all unfamiliar with React, and we did not know we needed to properly export JavaScript functions in order to use them in React. At first, we wanted to do backend in Flask in Python, and frontend in React, but we had a hard time finding out how to link Flask with React, so we decided to switch to JavaScript, which not all of us are familiar with.
 
 ## What's next for Face Authenticator
-
+We would need a database of users with their informations, including the user, check in time, and check out time.
 
 # The Program
 
