@@ -41,7 +41,7 @@ function authenticateUser() {
     .authenticate({
       locale: "auto", // Default user locale
     })
-    .then((userData) => {
+    .then(async (userData) => {
       console.log("Success, user recognized");
       // Grab the facial ID linked to this particular user which will be same
       // for each of his successful future authentication. FACEIO recommend
@@ -53,6 +53,7 @@ function authenticateUser() {
       console.log("Associated Payload: " + JSON.stringify(userData.payload));
       // {"whoami": 123456, "email": "john.doe@example.com"} set via enroll()
       // link to new page
+      await new Promise((resolve) => setTimeout(resolve, 3000));
       const curr = location.href;
       location.href = curr.concat("check");
     })
