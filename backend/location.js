@@ -23,6 +23,10 @@ function calcDist(long1, lat1, long2, lat2) {
   return c * r;
 }
 
+function toMain() {
+  location.href = "/";
+}
+
 const options = {
   enableHighAccuracy: true,
   timeout: 5000,
@@ -58,10 +62,10 @@ function isValidIn(long, lat) {
   } else {
     document.write("Check in failed, please be at the assigned location.");
   }
-  setTimeout(window.history.back(), 5000);
+  setTimeout(toMain(), 5000);
 }
 
-function isValidOut() {
+function isValidOut(long, lat) {
   setLocation(long, lat);
   const valid = navigator.geolocation.getCurrentPosition(
     sucessCallBack,
@@ -73,6 +77,6 @@ function isValidOut() {
   } else {
     document.write("Check out failed, please be at the assigned location.");
   }
-  setTimeout(window.history.back(), 5000);
+  setTimeout(toMain(), 5000);
 }
 export default isValidLocation;
