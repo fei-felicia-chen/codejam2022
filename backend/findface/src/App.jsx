@@ -12,8 +12,8 @@ function App() {
           <Route path="/" exact>
             <section>
               <h1>Face Authentication</h1>
-              <button onClick={enrollNewUser}>Enroll User</button>
-              <button onClick={authenticateUser}>Authenticate User</button>
+              <button onClick={enrollNewUser}>Register</button>
+              <button onClick={authenticateUser}>Log In</button>
             </section>
           </Route>
           <Route path="/check">
