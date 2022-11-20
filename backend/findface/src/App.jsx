@@ -11,17 +11,20 @@ function App() {
         <Switch>
           <Route path="/" exact>
             <section>
-              <h1>Face Authentication</h1>
-              <button onClick={enrollNewUser}>Enroll User</button>
-              <button onClick={authenticateUser}>Authenticate User</button>
+              <h1 className="header">Face Authentication</h1>
+              <button className="btn" onClick={enrollNewUser}>
+                Register
+              </button>
+              <button className="btn" onClick={authenticateUser}>
+                Log In
+              </button>
+
             </section>
           </Route>
           <Route path="/check">
             <Check />
           </Route>
-          <Route path="/check-in">
-            <CheckInForm />
-          </Route>
+          <Route path="/check-in">{/* <CheckInForm /> */}</Route>
           <Route path="/check-out"></Route>
         </Switch>
       </div>

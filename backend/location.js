@@ -1,3 +1,4 @@
+
 let targetLong;
 let targetLat;
 
@@ -74,3 +75,4 @@ function isValidOut() {
   }
   setTimeout(window.history.back(), 5000);
 }
+export default isValidLocation;
