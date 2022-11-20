@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import isValidOut from "../../../../locationOut";
+import isValidOut from "../../../../IsValidOut";
 import classes from "./Check.module.css";
-import isVal from "../../../../locationIn";
+import isVal from "../../../../IsValidIn";
 
 function CheckOut(props) {
-  if (!isVal) {
+  if (isVal) {
     return (
       <div>
         <section>
