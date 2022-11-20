@@ -1,4 +1,5 @@
 let targetLong = document.getElementById("location").longitude;
+
 let targetLat = document.getElementById("location").latitude;
 
 const options = {
@@ -31,3 +32,4 @@ function isValidLocation() {
     window.history.back();
   }
 }
+export default isValidLocation;

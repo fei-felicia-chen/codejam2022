@@ -10,16 +10,15 @@ function CheckInForm(props) {
     event.preventDefault();
     const enteredName = nameInputRef.current.value;
     const enteredLocation = locationInputRef.current.value;
+    const driverData = {
+      name: enteredName,
+      location: enteredLocation,
+    };
   }
-
-  const driverData = {
-    name: enteredName,
-    location: enteredLocation,
-  };
 
   return (
     <Card>
-      <form className={classes.form} onSubmit={submitHandler}>
+      {/* <form className={classes.form} onSubmit={submitHandler}>
         <div className={classes.control}>
           <label htmlFor="name">Name</label>
           <input type="text" required id="name" ref={nameInputRef}></input>
@@ -28,7 +27,7 @@ function CheckInForm(props) {
           <label htmlFor="location">Location</label>
           <input
             type="text"
-            requird
+            required
             id="location"
             ref={locationInputRef}
           ></input>
@@ -36,7 +35,7 @@ function CheckInForm(props) {
         <div className={classes.actions}>
           <button>Submit</button>
         </div>
-      </form>
+      </form> */}
     </Card>
   );
 }
