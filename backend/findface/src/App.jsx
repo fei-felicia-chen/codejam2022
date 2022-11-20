@@ -10,7 +10,7 @@ function App() {
         <Switch>
           <Route path="/" exact>
             <section>
-              <h1 className="header">Face Authentication</h1>
+              <h1 className="header">Face Authenticator</h1>
               <button className="btn" onClick={enrollNewUser}>
                 Register
               </button>
