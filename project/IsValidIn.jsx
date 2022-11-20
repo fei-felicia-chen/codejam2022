@@ -37,49 +37,48 @@ function IsValidIn() {
     timeout: 5000,
   };
 
-  const sucessCallBack = (position) => {
+  function successCallBack(position) {
     currLong = position.coords.longitude;
     currLat = position.coords.latitude;
+    console.log(currLong, currLat, targetLong, targetLat);
+    const dist = calcDist(currLong, currLat, targetLong, targetLat);
+    console.log(dist);
+    if (isValid(dist)) {
+      // document.write("Check in success!");
+
+      return (
+        <div>
+          <section>
+            <h1 className={classes.header}>The Check In is a Success!</h1>
+            <Link to="/">
+              <button className={classes.btnB}>Back</button>
+            </Link>
+          </section>
+        </div>
+      );
+    } else {
+      // document.write("Check in failed, please be at the assigned location.");
+
+      return (
+        <div>
+          <section>
+            <h1 className={classes.header}>You are not at the right location!</h1>
+            <Link to="/">
+              <button className={classes.btnB}>Back</button>
+            </Link>
+          </section>
+        </div>
+      );
+    }
   };
 
   const errorCallBack = (error) => {
     console.log(error);
   };
 
-  navigator.geolocation.getCurrentPosition(
-    sucessCallBack,
-    errorCallBack,
-    options
-  );
-  setLocation(-73.5747, 45.5041);
-  const dist = calcDist(currLong, currLat, targetLong, targetLat);
-  if (isValid(dist)) {
-    // document.write("Check in success!");
-
-    return (
-      <div>
-        <section>
-          <h1 className={classes.header}>The Check In is a Success!</h1>
-          <Link to="/">
-            <button className={classes.btnB}>Back</button>
-          </Link>
-        </section>
-      </div>
-    );
-  } else {
-    // document.write("Check in failed, please be at the assigned location.");
-
-    return (
-      <div>
-        <section>
-          <h1 className={classes.header}>You are not at the right location!</h1>
-          <Link to="/">
-            <button className={classes.btnB}>Back</button>
-          </Link>
-        </section>
-      </div>
-    );
-  }
+  setLocation(-73.57885, 45.50734);
+  navigator.geolocation.getCurrentPosition(successCallBack, errorCallBack, options);
+  
 }
 
 export default IsValidIn;

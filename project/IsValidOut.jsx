@@ -41,48 +41,50 @@ function IsValidOut() {
     timeout: 5000,
   };
 
-  const sucessCallBack = (position) => {
+  const successCallBack = (position) => {
     currLong = position.coords.longitude;
     currLat = position.coords.latitude;
+    const dist = calcDist(currLong, currLat, targetLong, targetLat);
+    console.log(dist);
+    if (isValid(dist)) {
+      // document.write("Check out success!");
+
+      return (
+        <div>
+          <section>
+            <h1 className={classes.header}>Check Out Is Successful!</h1>
+            <Link to="/">
+              <button className={classes.btnB}>Back</button>
+            </Link>
+          </section>
+        </div>
+      );
+    } else {
+      // document.write("Check out failed, please be at the assigned location.");
+
+      return (
+        <div>
+          <section>
+            <h1 className={classes.header}>You are not at the right location!</h1>
+            <Link to="/">
+              <button className={classes.btnB}>Back</button>
+            </Link>
+          </section>
+        </div>
+      );
+    }
   };
 
   const errorCallBack = (error) => {
     console.log(error);
   };
-
+  setLocation(0, 0);
   navigator.geolocation.getCurrentPosition(
-    sucessCallBack,
+    successCallBack,
     errorCallBack,
     options
   );
-  setLocation(-73.595552, 45.451863);
-  const dist = calcDist(currLong, currLat, targetLong, targetLat);
-  if (isValid(dist)) {
-    // document.write("Check out success!");
-
-    return (
-      <div>
-        <section>
-          <h1 className={classes.header}>Check Out Is Successful!</h1>
-          <Link to="/">
-            <button className={classes.btnB}>Back</button>
-          </Link>
-        </section>
-      </div>
-    );
-  } else {
-    // document.write("Check out failed, please be at the assigned location.");
-
-    return (
-      <div>
-        <section>
-          <h1 className={classes.header}>You are not at the right location!</h1>
-          <Link to="/">
-            <button className={classes.btnB}>Back</button>
-          </Link>
-        </section>
-      </div>
-    );
-  }
+  
+  
 }
 export default IsValidOut;
