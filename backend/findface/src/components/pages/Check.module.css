@@ -15,6 +15,7 @@
   border: 3px;
   border-style: solid;
   border-color: #259940;
+  color: #ffffff;
 }
 
 .btn:hover {
@@ -26,4 +27,5 @@
   /*background-color: #fecb69;*/
   padding: 2rem 2rem 2rem 2rem;
   border-radius: 30px;
+  color: #ffffff;
 }
