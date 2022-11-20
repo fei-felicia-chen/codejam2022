@@ -27,10 +27,10 @@ function App() {
             <Check />
           </Route>
           <Route path="/check-in">
-            <IsValidIn />
+            <CheckIn />
           </Route>
           <Route path="/check-out">
-            <IsValidOut />
+            <CheckOut />
           </Route>
         </Switch>
       </div>

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import classes from "./Check.module.css";
-import isValidIn from "../../../../IsValidIn";
-import isValidOut from "../../../../IsValidOut";
+import IsValidIn from "../../../../IsValidIn";
+import IsValidOut from "../../../../IsValidOut";
 
 function Check() {
   return (
@@ -9,12 +9,12 @@ function Check() {
       <section>
         <h1 className={classes.header}>CHOOSE YOUR STATUS</h1>
         <Link to="/check-in">
-          <button onClick={isValidIn} className={classes.btn}>
+          <button onClick={IsValidIn} className={classes.btn}>
             Check In
           </button>
         </Link>
         <Link to="/check-out">
-          <button onClick={isValidOut} className={classes.btn}>
+          <button onClick={IsValidOut} className={classes.btn}>
             Check Out
           </button>
         </Link>

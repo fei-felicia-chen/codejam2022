@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import isValidOut from "../../../../IsValidOut";
+import IsValidOut from "../../../../IsValidOut";
 import classes from "./Check.module.css";
 import isVal from "../../../../IsValidIn";
 
@@ -10,7 +10,7 @@ function CheckOut(props) {
         <section>
           <h1 className={classes.header}>Check Out Is Successful!</h1>
           <Link to="/">
-            <button className={classes.btnB}>Back</button>
+            <button onClick={IsValidOut} className={classes.btnB}>Back</button>
           </Link>
         </section>
       </div>
@@ -21,7 +21,7 @@ function CheckOut(props) {
         <section>
           <h1 className={classes.header}>You are not at the right location!</h1>
           <Link to="/">
-            <button className={classes.btnB}>Back</button>
+            <button onClick={IsValidOut} className={classes.btnB}>Back</button>
           </Link>
         </section>
       </div>
