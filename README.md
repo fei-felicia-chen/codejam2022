@@ -9,7 +9,7 @@ In order to prevent someone to pretend to be the original contractor, the latter
 ## How we built it
 
 ## Pre-requisites
-`cd findface`
+`cd project\findface`
 `npm install --save react-router-dom@5`
 `npm install vite`
 
