@@ -56,11 +56,12 @@ async function isValidIn() {
   setLocation(-73.5747, 45.5041);
   const dist = calcDist(currLong, currLat, targetLong, targetLat);
   if (isValid(dist)) {
-    document.write("Check in success!");
+    // document.write("Check in success!");
+    return true;
   } else {
-    document.write("Check in failed, please be at the assigned location.");
+    // document.write("Check in failed, please be at the assigned location.");
+    return false;
   }
-  setTimeout(toMain, 5000);
 }
 
 export default isValidIn;

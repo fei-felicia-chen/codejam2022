@@ -3,6 +3,7 @@ import "./components/authentication/authentication";
 import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
 import Check from "./components/pages/Check";
 import CheckIn from "./components/pages/CheckIn";
+import CheckOut from "./components/pages/CheckOut";
 
 function App() {
   return (
@@ -26,7 +27,9 @@ function App() {
           <Route path="/check-in">
             <CheckIn />
           </Route>
-          <Route path="/check-out"></Route>
+          <Route path="/check-out">
+            <CheckOut />
+          </Route>
         </Switch>
       </div>
     </BrowserRouter>
