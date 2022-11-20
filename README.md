@@ -4,7 +4,7 @@
 `npm install --save react-router-dom@5`
 `npm install vite`
 ## Instructions
-To run, do `npm run dev`
+To run the program, do `npm run dev`
 
 # Authors:
 * Chen Jun Chi
