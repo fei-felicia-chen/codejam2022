@@ -3,43 +3,45 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: trebuchet ms, sans-serif;
+  font-size: x-large;
   margin: 3rem;
-  background-color: #dfdfdf;
+  background-color: #ffffff;
 }
 
 h1,
 h2 {
-  color: #333333;
+  color: #000000;
 }
 
 .btn {
-  font: inherit;
-  padding: 0.5rem 1.5rem;
+  font-family: trebuchet ms, sans-serif;
+  padding: 0.5rem 1.6rem;
   cursor: pointer;
   border-radius: 4px;
-  background-color: #800040;
+  background-color: #04ae2b;
   color: white;
-  border: 1px solid #800040;
-  margin: 0 1rem;
+  border: 1px solid #04ae2b;
+  margin: 1rem 1rem 1rem 1rem;
+
 }
 
 .btn:hover {
-  background-color: #9c1458;
-  border-color: #9c1458;
+  background-color: #019624;
+  border-color: #019624;
 }
 
 .btn--alt {
   background-color: transparent;
-  color: #800040;
+  color: #04ae2b;
 }
 
 .btn--alt:hover {
-  background-color: #f8dae9;
+  background-color: #e0f8da;
 }
 
 .card {
-  background-color: white;
+  background-color: rgb(255, 251, 240);
   border-radius: 4px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   padding: 1rem;
@@ -71,4 +73,11 @@ h2 {
   height: 100vh;
   top: 0;
   left: 0;
+}
+
+.MainHeader {
+  /* background-color: #6495ed; */
+  font-size: larger;
+  border-radius: 20px;
+  padding: 1rem 1rem 1rem 1rem;
 }
